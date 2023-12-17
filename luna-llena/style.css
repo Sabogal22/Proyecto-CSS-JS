@@ -1,0 +1,77 @@
+:root {
+  --gray: #4a4649;
+  --black: #29272a;
+  --dark: #383339;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(#000000 15%, #200229);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+body *, *::before, *::after {
+  box-sizing: border-box;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: repeating-conic-gradient(#FFF9 0%, transparent .00004%, transparent .163345%);
+  filter: drop-shadow(0px 0px 1px #fff) drop-shadow(0px 0px 2px #fff) drop-shadow(0px 0px 3px #fff);
+  z-index: -3;
+}
+
+.moon {
+  position: absolute;
+  width: 65vmin;
+  height: 65vmin;
+  left: 20vmin;
+  left: calc(calc(50vw - 32.5vmin) - 15vw);
+  top: 15vmin;
+  opacity: 1;
+  border-radius: 100%;
+  animation: start-moon 3s ease 0s 1;
+  background: radial-gradient(circle at 50% 50%, #fdfdfd 0% 7vmin, #ffffff00 7.25vmin 100%);
+  background-color: #fff;
+  box-shadow: 0 0 8em 4em #6493a9, 0 0 8em -16em #ff660000 inset, 0 0 20px 5px #fdfdfd;
+  mix-blend-mode: exclusion;
+  filter: blur(1px);
+  z-index: -3;
+}
+
+.moon::before {
+  content: "";
+  background: radial-gradient(circle at 100% 60%, #ffffff00 0% 60%, #dddddd 75% 100%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  border-radius: 100%;
+}
+
+.moon::after {
+  content: "";
+  background: radial-gradient(circle at 0% 40%, #efefef 0% 60%, #ededed 75% 100%);
+  width: 13.5vmin;
+  height: 13.5vmin;
+  position: absolute;
+  top: 18%;
+  left: 17%;
+  border-radius: 100%;
+  filter: blur(2px);
+  opacity: 0.75;
+}
