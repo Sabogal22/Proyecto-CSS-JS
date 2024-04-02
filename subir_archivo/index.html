@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zona de entrega de archivos</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <form class="dropzone-box">
+    <h2>Cargar y adjuntar archivos</h2>
+    <p>Adjuntar archivos a este proyecto</p>
+    <div class="dropzone-area">
+      <div class="file-upload-icon"><!-- svg icon --></div>
+      <p>Haga clic para cargar o arrastre y suelte</p>
+      <input type="file" id="upload-file" name="uploaded-file" required>
+      <p class="message">No hay archivos seleccionados</p>
+    </div>
+    <div class="dropzone-actions">
+      <button type="reset">
+        Cancelar
+      </button>
+      <button id="submit-button" type="submit">
+        Guardar
+      </button>
+    </div>
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>
